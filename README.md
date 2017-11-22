@@ -1,5 +1,5 @@
 # 基于golang http包实现的文件服务器
-##代码仓库：https://github.com/danny-wang/repo
+## 代码仓库：https://github.com/danny-wang/repo
 ## 基本功能
 
  1. 压缩模式或正常上传
@@ -44,11 +44,11 @@ curl -H "Accept-Encoding: gzip"   http://localhost:50010/r/download_file/jianwan
 ```
 
 **其他请求可以直接阅读repo.go中的注释**
-###方式二：客户端代码调用
+### 方式二：客户端代码调用
 **参考repo/client/test.go中的代码**
 
-###方式三：通过网页
-**直接访问 http://localhost:50010/r/list/，即可查看数据库中的文件**
+### 方式三：通过网页
+**直接访问 http://localhost:50010/r/list/  ，即可查看数据库中的文件**
 ## 主要技术
 
  - 使用boltdb文件数据库存储数据库中文件的元信息
