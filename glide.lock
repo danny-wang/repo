@@ -1,0 +1,24 @@
+hash: 001649ee4ec76c898da8c22132be0ed05232ebb46e27fecf911980e131db2a65
+updated: 2017-11-22T14:27:24.88316912+08:00
+imports:
+- name: github.com/boltdb/bolt
+  version: 2f1ce7a837dcb8da3ec595b1dac9d0632f0f99e8
+- name: github.com/julienschmidt/httprouter
+  version: 8c199fb6259ffc1af525cc3ad52ee60ba8359669
+- name: golang.org/x/net
+  version: 9dfe39835686865bff950a07b394c12a98ddc811
+  subpackages:
+  - idna
+  - lex/httplex
+- name: golang.org/x/sys
+  version: 82aafbf43bf885069dc71b7e7c2f9d7a614d47da
+  subpackages:
+  - unix
+- name: golang.org/x/text
+  version: 88f656faf3f37f690df1a32515b479415e1a6769
+  subpackages:
+  - secure/bidirule
+  - transform
+  - unicode/bidi
+  - unicode/norm
+testImports: []
