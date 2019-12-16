@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"compress/gzip"
 	"fmt"
-	"golang.org/x/net/lex/httplex"
+	"golang.org/x/net/http/httpguts"
 	"io"
 	"mime"
 	"net/http"
@@ -33,7 +33,7 @@ type NotWorthGzipCompressing interface {
 // it applies gzip compression on the fly, if it's found to be beneficial.
 func ServeContent(w http.ResponseWriter, req *http.Request, name string, modTime time.Time, content io.ReadSeeker) {
 	// If client doesn't accept gzip encoding, serve without compression.
-	if !httplex.HeaderValuesContainsToken(req.Header["Accept-Encoding"], "gzip") {
+	if !httpguts.HeaderValuesContainsToken(req.Header["Accept-Encoding"], "gzip") {
 		http.ServeContent(w, req, name, modTime, content)
 		return
 	}
