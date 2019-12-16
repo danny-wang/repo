@@ -38,9 +38,9 @@ curl -H "Content-Encoding: gzip"  -F "file=@1.png.gz" -F dest=/jianwang/3.png  -
 
 ```
 Normal download: 正常下载，服务器不会压缩数据进行传输
-curl -O http://localhost:50010/r/download_file/jianwang/ads.111
+curl -O http://localhost:50010/r/download/jianwang/ads.111
 Gzip compress mode to download:  指定服务器可以以压缩方式传输文件，客户自己负责解压与否
-curl -H "Accept-Encoding: gzip"   http://localhost:50010/r/download_file/jianwang/ads.111 | gunzip >a.dmg
+curl -H "Accept-Encoding: gzip"   http://localhost:50010/r/download/jianwang/ads.111 | gunzip >a.dmg
 ```
 
 **其他请求可以直接阅读repo.go中的注释**
