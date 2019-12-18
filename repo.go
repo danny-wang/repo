@@ -98,6 +98,12 @@ func upload(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 				Msg: "file exist"}})
 			return
 		}
+		oErr := os.Remove(localPath)
+	        if oErr != nil {
+			log.Error(err)
+		} else {
+			log.Debug("delete exist file success:" + localPath)
+		}
 	}
 	if err := os.MkdirAll(path.Dir(localPath), os.ModePerm); err != nil {
 		log.Error(err)
